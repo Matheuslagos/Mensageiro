@@ -15,5 +15,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         print('conectado a', addr)
         while True:
             data = conn.recv(1024)
+            print(data)
             if not data: break
-            conn.sendall(data) 
+            conn.sendall(data)
