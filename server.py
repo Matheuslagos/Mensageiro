@@ -16,8 +16,8 @@ def handle_client(conn, addr):
         print('Recebido de', addr, ':', data.decode())
         # Repassar a mensagem recebida para todos os clientes, exceto o remetente
         for connection in connections:
-            if connection != conn:
-                connection.sendall(data)
+            #if connection != conn:
+            connection.sendall(data)
     conn.close()
     connections.remove(conn)
 
