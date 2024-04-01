@@ -1,8 +1,12 @@
 import socket
 import threading
 
-HOST = '26.197.241.123'
+HOST = 'localhost'
 PORT = 5007
+
+#SOCK_STREAM = TCP
+#SOCK_DGRAM = UDP
+#AF_INET = IP E PORTA. MODELO INET
 
 # Lista para armazenar todas as conexões ativas
 connections = []
