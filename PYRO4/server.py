@@ -23,10 +23,10 @@ class ChatServer:
                     print(f'Erro ao enviar mensagem para o cliente {i}: {e}')
 
 # Iniciando o servidor Pyro4
-daemon = Pyro4.Daemon()
-ns = Pyro4.locateNS()
-uri = daemon.register(ChatServer)
-ns.register("example.chatserver", uri)
+juj= "ip"
+daemon = Pyro4.Daemon(host=juj)
+uri =daemon.register(ChatServer)
+print(uri)
 
 print("Servidor pronto.")
 daemon.requestLoop()
